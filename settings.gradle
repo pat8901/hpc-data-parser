@@ -7,5 +7,5 @@
  * in the user manual at https://docs.gradle.org/8.0.2/userguide/multi_project_builds.html
  */
 
-rootProject.name = 'hpc-data-parser'
+rootProject.name = 'ge-log-analyzer-1.0.0'
 include('app')
