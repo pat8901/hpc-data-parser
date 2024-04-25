@@ -44,3 +44,10 @@ tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+task copyTask(type: Copy) {
+        from 'src/main/resources/scripts/.'
+        into 'build/libs'
+}
+//tasks.named("copyTask") { dependsOn("build") }
+tasks.named("build") { finalizedBy("copyTask") }
