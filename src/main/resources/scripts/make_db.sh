@@ -1,9 +1,9 @@
 #!/bin/bash
 CWD=$(echo "$PWD")
 
-/usr/bin/sqlite3 $CWD/garbage.db <<'END_SQL'
+/usr/bin/sqlite3 $CWD/ge_log.db <<'END_SQL'
 .separator ";"
-.import output_full.csv gelog
+.import ge_log.csv gelog
 
 create table qsub_table as SELECT qsub_time/1800000*1800000 AS bin, COUNT(*) as count from GELOG GROUP by bin;
 create table start_table as SELECT start_time/1800000*1800000 AS bin, COUNT(*) as count from GELOG GROUP by bin;

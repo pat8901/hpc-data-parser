@@ -11,10 +11,11 @@ import java.net.URISyntaxException;
 import java.sql.SQLException;
 import database.Database;
 
+// TODO add a way to get dynamic output file names based on source file input
 public class App {
 
     public String getGreeting() {
-        return "Starting Program...";
+        return "Starting Program ...";
     }
 
     public static void main(String[] args) throws IOException, SQLException {
@@ -43,15 +44,15 @@ public class App {
             System.out.println("Please install SQLite3 to run this program.");
             System.exit(0);
         }
-        String source_path = prompt.startPrompt();
-        Boolean pathExist = tools.checkPath(source_path);
+        String ge_log_source_path = prompt.startPrompt();
+        Boolean pathExist = tools.checkPath(ge_log_source_path);
 
         if (pathExist) {
-            File source_file = new File(source_path);
-            String[] jarDir = jarPath.split("/hpc-data-parser.jar");
-            String csv_save_path = jarDir[0] + "/output_full.csv";
+            File ge_source_file = new File(ge_log_source_path);
+            String[] jarDir = jarPath.split("/ge-log-analyzer-1.0.0.jar");
+            String csv_save_path = jarDir[0] + "/ge_log.csv";
 
-            parse.parseFileV2(source_file);
+            parse.parseFileV2(ge_source_file);
             writer.replaceHeader(parse.lines);
             writer.createFile(csv_save_path);
             writer.writeFile(csv_save_path, parse.lines);
@@ -60,7 +61,7 @@ public class App {
         } else {
             System.out.println("Path does not exist!");
         }
-        System.out.println("Shutting down...");
+        System.out.println("Shutting down ...");
     }
 
 }

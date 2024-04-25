@@ -9,14 +9,14 @@ public class Prompt {
         boolean isWindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
         if (isWindows) {
             System.out.println("This program is not compatible with Windows.");
-            System.out.println("Shutting down...");
+            System.out.println("Shutting down ...");
             System.exit(-1);
         }
         Scanner scanner = new Scanner(System.in);
         String input;
 
         while (true) {
-            System.out.print("Enter input: ");
+            System.out.print("Enter the path to the Grid Engine log file: ");
             input = scanner.nextLine();
 
             if (input.equals("--help")) {

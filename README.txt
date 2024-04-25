@@ -25,13 +25,15 @@ Features:
 
 Installation:
 
+    This program only runs on Unix systems. Only been tested on Ubuntu.
     Clone the repository: git clone https://github.com/yourusername/grid-engine-log-analyzer.git
     Compile the Java program using the gradle wrapper: ./gradlew build
     Ensure SQLite is installed on your system for the bash script to work.
 
 Usage:
 
-    Run the Java program: java -jar ge-log-analyzer-1.0.0
+    Ensure that ge-log-analyzer-1.0.0.jar, make_db.sh, and ge_log_file are all in the same directory. (This limitation will be fixed in a later version release)
+    Run the Java program: java -jar ge-log-analyzer-1.0.0.jar
     Enter the path to the Grid Engine log file when prompted.
     The program will create a CSV file with the reformatted data. 
     Using the newly created CSV file the program will automatically call the bash script to create a SQLite database with binned data tables.
@@ -48,8 +50,6 @@ Bash
 
 $ java -jar ge-log-analyzer-1.0.0
 Enter the path to the Grid Engine log file: /path/to/grid_engine.log
-created: grid_engine.csv
-SQLite database created successfully: grid_engine.db
 
 License:
 

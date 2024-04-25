@@ -15,7 +15,7 @@ public class Parse {
         lines = new ArrayList<>();
         StringBuilder temp = new StringBuilder();
         try {
-            System.out.println("Parsing the file...");
+            System.out.println("Parsing the file ...");
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String line;
             String modified_temp = null;
