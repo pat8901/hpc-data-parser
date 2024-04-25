@@ -9,7 +9,7 @@ public class Prompt {
         boolean isWindows = System.getProperty("os.name").toLowerCase().startsWith("windows");
         if (isWindows) {
             System.out.println("This program is not compatible with Windows.");
-            System.out.println("Shutting down ...");
+            System.out.println("Shutting down.");
             System.exit(-1);
         }
         Scanner scanner = new Scanner(System.in);
@@ -31,6 +31,6 @@ public class Prompt {
     }
 
     public void helpMenu() {
-        System.out.println("This is the help menu");
+        System.out.println("--- This is the help menu ---\n");
     }
 }

@@ -34,7 +34,7 @@ public class Database {
             int exitVal = process.waitFor();
             if (exitVal == 0) {
                 if (output.length() != 0) {
-                    System.out.println(output);
+                    // System.out.println(output);
                     return true;
                 }
             }
@@ -46,7 +46,7 @@ public class Database {
 
     // Calls bash script to convert and organize csv file into sqlite database
     public void callBashScript(String path) throws IOException {
-        System.out.println("Running bash script...");
+        System.out.println("Running bash script ...");
         try {
             ProcessBuilder processBuilder = new ProcessBuilder();
             processBuilder

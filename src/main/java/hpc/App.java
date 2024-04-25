@@ -15,7 +15,7 @@ import database.Database;
 public class App {
 
     public String getGreeting() {
-        return "hi";
+        return "Welcome to Grid Engine Log Analyzer\nFor help type \"--help\"\n";
     }
 
     public static void main(String[] args) throws IOException, SQLException {
@@ -62,7 +62,7 @@ public class App {
         } else {
             System.out.println("Path does not exist!");
         }
-        System.out.println("Shutting down ...");
+        System.out.println("Shutting down.");
     }
 
 }
