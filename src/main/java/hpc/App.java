@@ -15,7 +15,7 @@ import database.Database;
 public class App {
 
     public String getGreeting() {
-        return "Starting Program ...";
+        return "hi";
     }
 
     public static void main(String[] args) throws IOException, SQLException {
@@ -28,9 +28,10 @@ public class App {
                     .getLocation()
                     .toURI()
                     .getPath();
-            System.out.println("JAR Path : " + jarPath);
+            // System.out.println("JAR Path : " + jarPath);
         } catch (URISyntaxException e) {
             e.printStackTrace();
+            System.exit(0);
         }
 
         Prompt prompt = new Prompt();
