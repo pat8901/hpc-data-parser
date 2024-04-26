@@ -45,9 +45,28 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+
 task copyTask(type: Copy) {
-        from 'src/main/resources/scripts/.'
-        into 'build/libs'
+    dependsOn 'copyScripts'
+    from 'README.txt'
+    into 'build/libs'
+    from 'License.txt'
+    into 'build/libs'
+
 }
-//tasks.named("copyTask") { dependsOn("build") }
+
+task copyScripts(type: Copy){
+    dependsOn 'ensureDirectory'
+    from 'src/main/resources/scripts/make_db.sh'
+    into 'build/libs/lib'
+}
+
+tasks.register('ensureDirectory') {
+    description 'Creates a lib directory for packaged program'
+    doLast {
+        println 'Making directory'
+        mkdir "build/libs/lib"
+    }
+}
+
 tasks.named("build") { finalizedBy("copyTask") }
