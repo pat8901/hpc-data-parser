@@ -12,9 +12,9 @@ Features:
     Uses a bash script to create a SQLite database from the CSV file.
     Generates binned data tables for use in time series analysis.
 
-Installation:
+Installation: (This program only runs on Unix systems. Only been tested on Ubuntu.)
 
-    This program only runs on Unix systems. Only been tested on Ubuntu.
+    Ensure Java (JDK 11 or higher) is installed
     Clone the repository: git clone https://github.com/yourusername/grid-engine-log-analyzer.git
     Compile the Java program using the gradle wrapper: ./gradlew build
     Ensure SQLite is installed on your system for the bash script to work.

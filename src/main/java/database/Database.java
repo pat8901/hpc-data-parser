@@ -52,7 +52,7 @@ public class Database {
             processBuilder
                     .command(
                             "/bin/bash", "-c",
-                            path + "/make_db.sh");
+                            path + "/lib/make_db.sh");
             processBuilder.start().waitFor();
         } catch (Exception e) {
             e.printStackTrace();
