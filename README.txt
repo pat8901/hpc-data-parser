@@ -15,7 +15,7 @@ Features:
 Installation: (This program only runs on Unix systems. Only been tested on Ubuntu.)
 
     Ensure Java (JDK 11 or higher) is installed
-    Clone the repository: git clone https://github.com/yourusername/grid-engine-log-analyzer.git
+    Clone the repository: git clone https://github.com/pat8901/hpc-data-parser.git
     Compile the Java program using the gradle wrapper: ./gradlew build
     Ensure SQLite is installed on your system for the bash script to work.
 
