@@ -22,6 +22,7 @@ Installation: (This program only runs on Unix systems. Only been tested on Ubunt
 Usage:
 
     Ensure that ge-log-analyzer-1.0.0.jar, make_db.sh, and ge_log_file are all in the same directory. (This limitation will be fixed in a later version release)
+
     For example:
         john@john-pc:~/Desktop/grid_engine_program$ ls
         ge-log-analyzer-1.0.0.jar  make_db.sh  source_log.txt
@@ -37,9 +38,7 @@ Requirements:
     SQLite
     Access to a Grafana server for visualization (optional)
 
-Example:
-
-Bash
+Example: (Bash)
 
 $ java -jar ge-log-analyzer-1.0.0
 Enter the path to the Grid Engine log file: /path/to/grid_engine.log
