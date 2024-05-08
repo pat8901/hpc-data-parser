@@ -12,7 +12,7 @@ Features:
     Uses a bash script to create a SQLite database from the CSV file.
     Generates binned data tables for use in time series analysis.
 
-Installation: (This program only runs on Unix systems. Only been tested on Ubuntu.)
+Installation: (This program only runs on Linux systems. Only been tested on Ubuntu)
 
     Ensure Java (JDK 11 or higher) is installed
     Clone the repository: git clone https://github.com/pat8901/hpc-data-parser.git
